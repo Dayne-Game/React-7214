@@ -1,0 +1,733 @@
+2019-11-15T08:59:44.507+1300 I CONTROL  [initandlisten] MongoDB starting : pid=56251 port=27017 dbpath=db/ 64-bit host=DWFG
+2019-11-15T08:59:44.507+1300 I CONTROL  [initandlisten] db version v4.0.3
+2019-11-15T08:59:44.507+1300 I CONTROL  [initandlisten] git version: 7ea530946fa7880364d88c8d8b6026bbc9ffa48c
+2019-11-15T08:59:44.507+1300 I CONTROL  [initandlisten] allocator: system
+2019-11-15T08:59:44.507+1300 I CONTROL  [initandlisten] modules: none
+2019-11-15T08:59:44.507+1300 I CONTROL  [initandlisten] build environment:
+2019-11-15T08:59:44.507+1300 I CONTROL  [initandlisten]     distarch: x86_64
+2019-11-15T08:59:44.507+1300 I CONTROL  [initandlisten]     target_arch: x86_64
+2019-11-15T08:59:44.507+1300 I CONTROL  [initandlisten] options: { config: "mongo.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "db/" }, systemLog: { destination: "file", logAppend: true, path: "logs/mongo.log" } }
+2019-11-15T08:59:44.511+1300 I STORAGE  [initandlisten] wiredtiger_open config: create,cache_size=3584M,session_max=20000,eviction=(threads_min=4,threads_max=4),config_base=false,statistics=(fast),log=(enabled=true,archive=true,path=journal,compressor=snappy),file_manager=(close_idle_time=100000),statistics_log=(wait=0),verbose=(recovery_progress),
+2019-11-15T08:59:45.085+1300 I STORAGE  [initandlisten] WiredTiger message [1573761585:85040][56251:0x10f52dd40], txn-recover: Set global recovery timestamp: 0
+2019-11-15T08:59:45.122+1300 I RECOVERY [initandlisten] WiredTiger recoveryTimestamp. Ts: Timestamp(0, 0)
+2019-11-15T08:59:45.169+1300 I CONTROL  [initandlisten] 
+2019-11-15T08:59:45.169+1300 I CONTROL  [initandlisten] ** WARNING: Access control is not enabled for the database.
+2019-11-15T08:59:45.169+1300 I CONTROL  [initandlisten] **          Read and write access to data and configuration is unrestricted.
+2019-11-15T08:59:45.169+1300 I CONTROL  [initandlisten] 
+2019-11-15T08:59:45.202+1300 I STORAGE  [initandlisten] createCollection: admin.system.version with provided UUID: 3a96729a-bd68-4251-bc58-f71c6836cb6a
+2019-11-15T08:59:45.257+1300 I COMMAND  [initandlisten] setting featureCompatibilityVersion to 4.0
+2019-11-15T08:59:45.263+1300 I STORAGE  [initandlisten] createCollection: local.startup_log with generated UUID: 8e6715ae-60de-43ba-a383-a87593c75ad9
+2019-11-15T08:59:45.315+1300 I FTDC     [initandlisten] Initializing full-time diagnostic data capture with directory 'db/diagnostic.data'
+2019-11-15T08:59:45.355+1300 I NETWORK  [initandlisten] waiting for connections on port 27017
+2019-11-15T08:59:45.355+1300 I STORAGE  [LogicalSessionCacheRefresh] createCollection: config.system.sessions with generated UUID: 09adc9b7-5419-43dc-b040-ea4fbccd5de7
+2019-11-15T08:59:45.424+1300 I INDEX    [LogicalSessionCacheRefresh] build index on: config.system.sessions properties: { v: 2, key: { lastUse: 1 }, name: "lsidTTLIndex", ns: "config.system.sessions", expireAfterSeconds: 1800 }
+2019-11-15T08:59:45.424+1300 I INDEX    [LogicalSessionCacheRefresh] 	 building index using bulk method; build may temporarily use up to 500 megabytes of RAM
+2019-11-15T08:59:45.428+1300 I INDEX    [LogicalSessionCacheRefresh] build index done.  scanned 0 total records. 0 secs
+2019-11-15T09:00:14.850+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:56083 #1 (1 connection now open)
+2019-11-15T09:00:14.851+1300 I NETWORK  [conn1] received client metadata from 127.0.0.1:56083 conn1: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.3" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "19.0.0" } }
+2019-11-15T09:00:14.856+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:56084 #2 (2 connections now open)
+2019-11-15T09:00:14.856+1300 I NETWORK  [conn2] received client metadata from 127.0.0.1:56084 conn2: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.3" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "19.0.0" } }
+2019-11-15T09:00:14.861+1300 I NETWORK  [conn1] end connection 127.0.0.1:56083 (1 connection now open)
+2019-11-15T09:00:14.861+1300 I NETWORK  [conn2] end connection 127.0.0.1:56084 (0 connections now open)
+2019-11-15T09:00:30.787+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:56086 #3 (1 connection now open)
+2019-11-15T09:00:30.795+1300 I NETWORK  [conn3] received client metadata from 127.0.0.1:56086 conn3: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.3" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "19.0.0" } }
+2019-11-15T09:00:30.815+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:56087 #4 (2 connections now open)
+2019-11-15T09:00:30.815+1300 I NETWORK  [conn4] received client metadata from 127.0.0.1:56087 conn4: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.3" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "19.0.0" } }
+2019-11-15T09:00:30.985+1300 I COMMAND  [conn4] command Dayne_Assignment_03_DB.$cmd appName: "MongoDB Shell" command: createUser { createUser: "admin", pwd: "xxx", roles: [ { role: "readWrite", db: "Dayne_Assignment_03_DB = null;" } ], digestPassword: true, writeConcern: { w: "majority", wtimeout: 600000.0 }, lsid: { id: UUID("7eb9efc9-5f11-432e-9fc3-84edcdd83114") }, $db: "Dayne_Assignment_03_DB" } numYields:0 ok:0 errMsg:"No role named readWrite@Dayne_Assignment_03_DB = null;" errName:RoleNotFound errCode:31 reslen:142 locks:{ Global: { acquireCount: { r: 1, w: 1 } }, Database: { acquireCount: { W: 1 } }, Collection: { acquireCount: { w: 1 } } } protocol:op_msg 167ms
+2019-11-15T09:00:30.990+1300 I NETWORK  [conn3] end connection 127.0.0.1:56086 (1 connection now open)
+2019-11-15T09:00:30.990+1300 I NETWORK  [conn4] end connection 127.0.0.1:56087 (0 connections now open)
+2019-11-15T09:01:07.956+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:56096 #5 (1 connection now open)
+2019-11-15T09:01:07.963+1300 I NETWORK  [conn5] received client metadata from 127.0.0.1:56096 conn5: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.3" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "19.0.0" } }
+2019-11-15T09:01:07.973+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:56097 #6 (2 connections now open)
+2019-11-15T09:01:07.973+1300 I NETWORK  [conn6] received client metadata from 127.0.0.1:56097 conn6: { application: { name: "MongoDB Shell" }, driver: { name: "MongoDB Internal Client", version: "4.0.3" }, os: { type: "Darwin", name: "Mac OS X", architecture: "x86_64", version: "19.0.0" } }
+2019-11-15T09:01:08.015+1300 I STORAGE  [conn6] createCollection: admin.system.users with generated UUID: 0e855a98-f8de-42ef-9ba0-84770a9fefb8
+2019-11-15T09:01:08.102+1300 I COMMAND  [conn6] command admin.system.version appName: "MongoDB Shell" command: createUser { createUser: "admin", pwd: "xxx", roles: [ { role: "readWrite", db: "Dayne_Assignment_03_DB" } ], digestPassword: true, writeConcern: { w: "majority", wtimeout: 600000.0 }, lsid: { id: UUID("66631948-8c69-4fdb-9fe3-36d750fcfb97") }, $db: "Dayne_Assignment_03_DB" } numYields:0 reslen:38 locks:{ Global: { acquireCount: { r: 5, w: 4 } }, Database: { acquireCount: { r: 1, W: 4 } }, Collection: { acquireCount: { r: 1, w: 3 } } } protocol:op_msg 127ms
+2019-11-15T09:01:08.104+1300 I STORAGE  [conn6] createCollection: Dayne_Assignment_03_DB.posts with generated UUID: d885e215-32c2-4704-b193-cdb7309a50d8
+2019-11-15T09:01:08.150+1300 I STORAGE  [conn6] createCollection: Dayne_Assignment_03_DB.users with generated UUID: d8b8d435-e004-47d4-ac82-6963f62ac4f4
+2019-11-15T09:01:08.203+1300 I NETWORK  [conn5] end connection 127.0.0.1:56096 (1 connection now open)
+2019-11-15T09:01:08.203+1300 I NETWORK  [conn6] end connection 127.0.0.1:56097 (0 connections now open)
+2019-11-15T09:43:30.578+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:56712 #7 (1 connection now open)
+2019-11-15T09:43:30.581+1300 I NETWORK  [conn7] received client metadata from 127.0.0.1:56712 conn7: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-15T09:43:30.620+1300 I ACCESS   [conn7] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-15T10:39:42.158+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:57916 #8 (2 connections now open)
+2019-11-15T10:39:42.159+1300 I NETWORK  [conn8] received client metadata from 127.0.0.1:57916 conn8: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-15T10:39:42.163+1300 I ACCESS   [conn8] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-15T11:23:10.908+1300 I NETWORK  [conn8] end connection 127.0.0.1:57916 (1 connection now open)
+2019-11-15T11:23:10.908+1300 I NETWORK  [conn7] end connection 127.0.0.1:56712 (0 connections now open)
+2019-11-15T11:23:31.732+1300 I CONTROL  [main] ***** SERVER RESTARTED *****
+2019-11-15T11:23:31.758+1300 I CONTROL  [initandlisten] MongoDB starting : pid=58086 port=27017 dbpath=db/ 64-bit host=DWFG
+2019-11-15T11:23:31.758+1300 I CONTROL  [initandlisten] db version v4.0.3
+2019-11-15T11:23:31.758+1300 I CONTROL  [initandlisten] git version: 7ea530946fa7880364d88c8d8b6026bbc9ffa48c
+2019-11-15T11:23:31.758+1300 I CONTROL  [initandlisten] allocator: system
+2019-11-15T11:23:31.758+1300 I CONTROL  [initandlisten] modules: none
+2019-11-15T11:23:31.758+1300 I CONTROL  [initandlisten] build environment:
+2019-11-15T11:23:31.758+1300 I CONTROL  [initandlisten]     distarch: x86_64
+2019-11-15T11:23:31.758+1300 I CONTROL  [initandlisten]     target_arch: x86_64
+2019-11-15T11:23:31.758+1300 I CONTROL  [initandlisten] options: { config: "mongo.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "db/" }, systemLog: { destination: "file", logAppend: true, path: "logs/mongo.log" } }
+2019-11-15T11:23:31.758+1300 E STORAGE  [initandlisten] Failed to set up listener: SocketException: Address already in use
+2019-11-15T11:23:31.765+1300 I CONTROL  [initandlisten] now exiting
+2019-11-15T11:23:31.765+1300 I CONTROL  [initandlisten] shutting down with code:48
+2019-11-15T11:23:46.307+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:58994 #9 (1 connection now open)
+2019-11-15T11:23:46.312+1300 I NETWORK  [conn9] received client metadata from 127.0.0.1:58994 conn9: { driver: { name: "nodejs", version: "2.2.36" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "Node.js v10.11.0, LE, mongodb-core: 2.1.20", application: { name: "vscode-cosmosdb/0.11.0" } }
+2019-11-15T11:23:46.315+1300 I NETWORK  [conn9] end connection 127.0.0.1:58994 (0 connections now open)
+2019-11-15T11:23:47.706+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:58995 #10 (1 connection now open)
+2019-11-15T11:23:47.712+1300 I NETWORK  [conn10] received client metadata from 127.0.0.1:58995 conn10: { driver: { name: "nodejs", version: "2.2.36" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "Node.js v10.11.0, LE, mongodb-core: 2.1.20", application: { name: "vscode-cosmosdb/0.11.0" } }
+2019-11-15T11:23:49.685+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:58997 #11 (2 connections now open)
+2019-11-15T11:23:49.686+1300 I NETWORK  [conn11] received client metadata from 127.0.0.1:58997 conn11: { driver: { name: "nodejs", version: "2.2.36" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "Node.js v10.11.0, LE, mongodb-core: 2.1.20", application: { name: "vscode-cosmosdb/0.11.0" } }
+2019-11-15T11:23:49.700+1300 I NETWORK  [conn11] end connection 127.0.0.1:58997 (1 connection now open)
+2019-11-15T11:23:52.609+1300 I CONTROL  [main] ***** SERVER RESTARTED *****
+2019-11-15T11:23:52.625+1300 I CONTROL  [initandlisten] MongoDB starting : pid=58092 port=27017 dbpath=db/ 64-bit host=DWFG
+2019-11-15T11:23:52.625+1300 I CONTROL  [initandlisten] db version v4.0.3
+2019-11-15T11:23:52.625+1300 I CONTROL  [initandlisten] git version: 7ea530946fa7880364d88c8d8b6026bbc9ffa48c
+2019-11-15T11:23:52.625+1300 I CONTROL  [initandlisten] allocator: system
+2019-11-15T11:23:52.625+1300 I CONTROL  [initandlisten] modules: none
+2019-11-15T11:23:52.625+1300 I CONTROL  [initandlisten] build environment:
+2019-11-15T11:23:52.625+1300 I CONTROL  [initandlisten]     distarch: x86_64
+2019-11-15T11:23:52.625+1300 I CONTROL  [initandlisten]     target_arch: x86_64
+2019-11-15T11:23:52.625+1300 I CONTROL  [initandlisten] options: { config: "mongo.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "db/" }, systemLog: { destination: "file", logAppend: true, path: "logs/mongo.log" } }
+2019-11-15T11:23:52.626+1300 E STORAGE  [initandlisten] Failed to set up listener: SocketException: Address already in use
+2019-11-15T11:23:52.626+1300 I CONTROL  [initandlisten] now exiting
+2019-11-15T11:23:52.626+1300 I CONTROL  [initandlisten] shutting down with code:48
+2019-11-15T11:24:53.257+1300 I CONTROL  [main] ***** SERVER RESTARTED *****
+2019-11-15T11:24:53.268+1300 I CONTROL  [initandlisten] MongoDB starting : pid=58099 port=27017 dbpath=db/ 64-bit host=DWFG
+2019-11-15T11:24:53.268+1300 I CONTROL  [initandlisten] db version v4.0.3
+2019-11-15T11:24:53.268+1300 I CONTROL  [initandlisten] git version: 7ea530946fa7880364d88c8d8b6026bbc9ffa48c
+2019-11-15T11:24:53.268+1300 I CONTROL  [initandlisten] allocator: system
+2019-11-15T11:24:53.268+1300 I CONTROL  [initandlisten] modules: none
+2019-11-15T11:24:53.268+1300 I CONTROL  [initandlisten] build environment:
+2019-11-15T11:24:53.268+1300 I CONTROL  [initandlisten]     distarch: x86_64
+2019-11-15T11:24:53.268+1300 I CONTROL  [initandlisten]     target_arch: x86_64
+2019-11-15T11:24:53.268+1300 I CONTROL  [initandlisten] options: { config: "mongo.conf", net: { bindIp: "127.0.0.1" }, storage: { dbPath: "db/" }, systemLog: { destination: "file", logAppend: true, path: "logs/mongo.log" } }
+2019-11-15T11:24:53.269+1300 E STORAGE  [initandlisten] Failed to set up listener: SocketException: Address already in use
+2019-11-15T11:24:53.269+1300 I CONTROL  [initandlisten] now exiting
+2019-11-15T11:24:53.269+1300 I CONTROL  [initandlisten] shutting down with code:48
+2019-11-15T11:25:00.774+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:59014 #12 (2 connections now open)
+2019-11-15T11:25:00.774+1300 I NETWORK  [conn12] received client metadata from 127.0.0.1:59014 conn12: { driver: { name: "nodejs", version: "2.2.36" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "Node.js v10.11.0, LE, mongodb-core: 2.1.20", application: { name: "vscode-cosmosdb/0.11.0" } }
+2019-11-15T11:25:00.781+1300 I NETWORK  [conn12] end connection 127.0.0.1:59014 (1 connection now open)
+2019-11-15T12:00:29.016+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:60180 #13 (2 connections now open)
+2019-11-15T12:00:29.019+1300 I NETWORK  [conn13] received client metadata from 127.0.0.1:60180 conn13: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-15T12:00:29.038+1300 I ACCESS   [conn13] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-15T12:06:19.622+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:60532 #14 (3 connections now open)
+2019-11-15T12:06:19.624+1300 I NETWORK  [conn14] received client metadata from 127.0.0.1:60532 conn14: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-15T12:06:19.631+1300 I ACCESS   [conn14] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-15T12:27:03.161+1300 I NETWORK  [conn14] end connection 127.0.0.1:60532 (2 connections now open)
+2019-11-15T12:27:03.164+1300 I NETWORK  [conn13] end connection 127.0.0.1:60180 (1 connection now open)
+2019-11-15T12:27:04.779+1300 I NETWORK  [conn10] end connection 127.0.0.1:58995 (0 connections now open)
+2019-11-15T15:28:38.295+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:62613 #15 (1 connection now open)
+2019-11-15T15:28:38.298+1300 I NETWORK  [conn15] received client metadata from 127.0.0.1:62613 conn15: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-15T15:28:38.320+1300 I ACCESS   [conn15] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-15T15:31:18.828+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:62664 #16 (2 connections now open)
+2019-11-15T15:31:18.830+1300 I NETWORK  [conn16] received client metadata from 127.0.0.1:62664 conn16: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-15T15:31:18.837+1300 I ACCESS   [conn16] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-15T23:46:04.331+1300 I COMMAND  [conn16] command admin.$cmd command: isMaster { ismaster: true, $db: "admin" } numYields:0 reslen:224 locks:{} protocol:op_msg 1505ms
+2019-11-16T08:30:27.492+1300 I COMMAND  [ftdc] serverStatus was very slow: { after basic: 0, after asserts: 0, after backgroundFlushing: 0, after connections: 0, after dur: 0, after extra_info: 0, after freeMonitoring: 0, after globalLock: 0, after locks: 0, after logicalSessionRecordCache: 0, after network: 0, after opLatencies: 0, after opcounters: 0, after opcountersRepl: 0, after repl: 0, after security: 0, after storageEngine: 0, after transactions: 0, after transportSecurity: 0, after wiredTiger: 1491, at end: 1491 }
+2019-11-16T14:18:38.362+1300 I NETWORK  [conn16] end connection 127.0.0.1:62664 (1 connection now open)
+2019-11-16T14:18:38.362+1300 I NETWORK  [conn15] end connection 127.0.0.1:62613 (0 connections now open)
+2019-11-16T16:54:58.322+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:57544 #17 (1 connection now open)
+2019-11-16T16:54:58.345+1300 I NETWORK  [conn17] received client metadata from 127.0.0.1:57544 conn17: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T16:54:58.391+1300 I ACCESS   [conn17] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T16:56:08.734+1300 I NETWORK  [conn17] end connection 127.0.0.1:57544 (0 connections now open)
+2019-11-16T16:56:46.714+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:57579 #18 (1 connection now open)
+2019-11-16T16:56:46.717+1300 I NETWORK  [conn18] received client metadata from 127.0.0.1:57579 conn18: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T16:56:46.738+1300 I ACCESS   [conn18] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T16:57:08.945+1300 I NETWORK  [conn18] end connection 127.0.0.1:57579 (0 connections now open)
+2019-11-16T16:57:09.335+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:57591 #19 (1 connection now open)
+2019-11-16T16:57:09.338+1300 I NETWORK  [conn19] received client metadata from 127.0.0.1:57591 conn19: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T16:57:09.363+1300 I ACCESS   [conn19] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T16:57:29.702+1300 I NETWORK  [conn19] end connection 127.0.0.1:57591 (0 connections now open)
+2019-11-16T16:57:30.214+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:57596 #20 (1 connection now open)
+2019-11-16T16:57:30.218+1300 I NETWORK  [conn20] received client metadata from 127.0.0.1:57596 conn20: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T16:57:30.239+1300 I ACCESS   [conn20] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T16:57:49.567+1300 I NETWORK  [conn20] end connection 127.0.0.1:57596 (0 connections now open)
+2019-11-16T16:57:50.165+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:57599 #21 (1 connection now open)
+2019-11-16T16:57:50.171+1300 I NETWORK  [conn21] received client metadata from 127.0.0.1:57599 conn21: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T16:57:50.210+1300 I ACCESS   [conn21] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T16:59:49.261+1300 I NETWORK  [conn21] end connection 127.0.0.1:57599 (0 connections now open)
+2019-11-16T16:59:50.063+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:57624 #22 (1 connection now open)
+2019-11-16T16:59:50.066+1300 I NETWORK  [conn22] received client metadata from 127.0.0.1:57624 conn22: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T16:59:50.086+1300 I ACCESS   [conn22] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:00:28.341+1300 I NETWORK  [conn22] end connection 127.0.0.1:57624 (0 connections now open)
+2019-11-16T17:00:28.935+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:57633 #23 (1 connection now open)
+2019-11-16T17:00:28.941+1300 I NETWORK  [conn23] received client metadata from 127.0.0.1:57633 conn23: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:00:28.967+1300 I ACCESS   [conn23] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:01:22.672+1300 I NETWORK  [conn23] end connection 127.0.0.1:57633 (0 connections now open)
+2019-11-16T17:01:47.504+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:57657 #24 (1 connection now open)
+2019-11-16T17:01:47.516+1300 I NETWORK  [conn24] received client metadata from 127.0.0.1:57657 conn24: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:01:47.537+1300 I ACCESS   [conn24] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:02:16.639+1300 I NETWORK  [conn24] end connection 127.0.0.1:57657 (0 connections now open)
+2019-11-16T17:02:17.437+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:57660 #25 (1 connection now open)
+2019-11-16T17:02:17.441+1300 I NETWORK  [conn25] received client metadata from 127.0.0.1:57660 conn25: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:02:17.461+1300 I ACCESS   [conn25] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:02:17.637+1300 I INDEX    [conn25] build index on: Dayne_Assignment_03_DB.users properties: { v: 2, unique: true, key: { email: 1 }, name: "email_1", ns: "Dayne_Assignment_03_DB.users", background: true }
+2019-11-16T17:02:17.657+1300 I INDEX    [conn25] build index done.  scanned 0 total records. 0 secs
+2019-11-16T17:02:17.658+1300 I COMMAND  [conn25] command Dayne_Assignment_03_DB.$cmd command: createIndexes { createIndexes: "users", indexes: [ { name: "email_1", key: { email: 1 }, unique: true, background: true } ], lsid: { id: UUID("dd1e6813-5171-4a6c-ace8-862879da04ae") }, $db: "Dayne_Assignment_03_DB" } numYields:0 reslen:114 locks:{ Global: { acquireCount: { r: 2, w: 2 } }, Database: { acquireCount: { w: 3, W: 2 } }, Collection: { acquireCount: { w: 2 } } } protocol:op_msg 167ms
+2019-11-16T17:02:56.256+1300 I NETWORK  [conn25] end connection 127.0.0.1:57660 (0 connections now open)
+2019-11-16T17:02:57.057+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:57682 #26 (1 connection now open)
+2019-11-16T17:02:57.060+1300 I NETWORK  [conn26] received client metadata from 127.0.0.1:57682 conn26: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:02:57.080+1300 I ACCESS   [conn26] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:07:20.228+1300 I NETWORK  [conn26] end connection 127.0.0.1:57682 (0 connections now open)
+2019-11-16T17:07:21.001+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:57737 #27 (1 connection now open)
+2019-11-16T17:07:21.005+1300 I NETWORK  [conn27] received client metadata from 127.0.0.1:57737 conn27: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:07:21.025+1300 I ACCESS   [conn27] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:10:35.752+1300 I NETWORK  [conn27] end connection 127.0.0.1:57737 (0 connections now open)
+2019-11-16T17:10:36.647+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:57777 #28 (1 connection now open)
+2019-11-16T17:10:36.652+1300 I NETWORK  [conn28] received client metadata from 127.0.0.1:57777 conn28: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:10:36.678+1300 I ACCESS   [conn28] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:12:42.172+1300 I NETWORK  [conn28] end connection 127.0.0.1:57777 (0 connections now open)
+2019-11-16T17:12:43.067+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:57794 #29 (1 connection now open)
+2019-11-16T17:12:43.070+1300 I NETWORK  [conn29] received client metadata from 127.0.0.1:57794 conn29: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:12:43.089+1300 I ACCESS   [conn29] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:14:02.932+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:57815 #30 (2 connections now open)
+2019-11-16T17:14:02.942+1300 I NETWORK  [conn30] received client metadata from 127.0.0.1:57815 conn30: { driver: { name: "nodejs", version: "2.2.36" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "Node.js v10.11.0, LE, mongodb-core: 2.1.20", application: { name: "vscode-cosmosdb/0.11.0" } }
+2019-11-16T17:14:02.963+1300 I NETWORK  [conn30] end connection 127.0.0.1:57815 (1 connection now open)
+2019-11-16T17:14:04.603+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:57816 #31 (2 connections now open)
+2019-11-16T17:14:04.603+1300 I NETWORK  [conn31] received client metadata from 127.0.0.1:57816 conn31: { driver: { name: "nodejs", version: "2.2.36" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "Node.js v10.11.0, LE, mongodb-core: 2.1.20", application: { name: "vscode-cosmosdb/0.11.0" } }
+2019-11-16T17:16:40.678+1300 I NETWORK  [conn29] end connection 127.0.0.1:57794 (1 connection now open)
+2019-11-16T17:17:51.688+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:57875 #32 (2 connections now open)
+2019-11-16T17:17:51.690+1300 I NETWORK  [conn32] received client metadata from 127.0.0.1:57875 conn32: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:17:51.708+1300 I ACCESS   [conn32] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:18:29.828+1300 I NETWORK  [conn32] end connection 127.0.0.1:57875 (1 connection now open)
+2019-11-16T17:18:30.183+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:57893 #33 (2 connections now open)
+2019-11-16T17:18:30.186+1300 I NETWORK  [conn33] received client metadata from 127.0.0.1:57893 conn33: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:18:30.204+1300 I ACCESS   [conn33] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:18:34.842+1300 I NETWORK  [conn33] end connection 127.0.0.1:57893 (1 connection now open)
+2019-11-16T17:18:35.276+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:57896 #34 (2 connections now open)
+2019-11-16T17:18:35.279+1300 I NETWORK  [conn34] received client metadata from 127.0.0.1:57896 conn34: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:18:35.309+1300 I ACCESS   [conn34] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:18:35.645+1300 I NETWORK  [conn34] end connection 127.0.0.1:57896 (1 connection now open)
+2019-11-16T17:18:36.194+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:57898 #35 (2 connections now open)
+2019-11-16T17:18:36.199+1300 I NETWORK  [conn35] received client metadata from 127.0.0.1:57898 conn35: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:18:36.226+1300 I ACCESS   [conn35] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:20:32.388+1300 I NETWORK  [conn35] end connection 127.0.0.1:57898 (1 connection now open)
+2019-11-16T17:20:32.765+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:57922 #36 (2 connections now open)
+2019-11-16T17:20:32.770+1300 I NETWORK  [conn36] received client metadata from 127.0.0.1:57922 conn36: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:20:32.799+1300 I ACCESS   [conn36] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:21:14.088+1300 I NETWORK  [conn36] end connection 127.0.0.1:57922 (1 connection now open)
+2019-11-16T17:21:41.517+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:57942 #37 (2 connections now open)
+2019-11-16T17:21:41.521+1300 I NETWORK  [conn37] received client metadata from 127.0.0.1:57942 conn37: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:21:41.550+1300 I ACCESS   [conn37] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:22:04.222+1300 I NETWORK  [conn37] end connection 127.0.0.1:57942 (1 connection now open)
+2019-11-16T17:22:05.160+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:57956 #38 (2 connections now open)
+2019-11-16T17:22:05.162+1300 I NETWORK  [conn38] received client metadata from 127.0.0.1:57956 conn38: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:22:05.181+1300 I ACCESS   [conn38] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:22:22.902+1300 I NETWORK  [conn38] end connection 127.0.0.1:57956 (1 connection now open)
+2019-11-16T17:22:23.809+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:57963 #39 (2 connections now open)
+2019-11-16T17:22:23.813+1300 I NETWORK  [conn39] received client metadata from 127.0.0.1:57963 conn39: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:22:23.856+1300 I ACCESS   [conn39] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:24:54.308+1300 I NETWORK  [conn39] end connection 127.0.0.1:57963 (1 connection now open)
+2019-11-16T17:24:54.706+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:57985 #40 (2 connections now open)
+2019-11-16T17:24:54.709+1300 I NETWORK  [conn40] received client metadata from 127.0.0.1:57985 conn40: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:24:54.731+1300 I ACCESS   [conn40] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:25:02.632+1300 I NETWORK  [conn40] end connection 127.0.0.1:57985 (1 connection now open)
+2019-11-16T17:25:03.013+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:57988 #41 (2 connections now open)
+2019-11-16T17:25:03.017+1300 I NETWORK  [conn41] received client metadata from 127.0.0.1:57988 conn41: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:25:03.036+1300 I ACCESS   [conn41] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:28:10.589+1300 I NETWORK  [conn41] end connection 127.0.0.1:57988 (1 connection now open)
+2019-11-16T17:28:11.442+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:58097 #42 (2 connections now open)
+2019-11-16T17:28:11.445+1300 I NETWORK  [conn42] received client metadata from 127.0.0.1:58097 conn42: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:28:11.463+1300 I ACCESS   [conn42] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:28:19.000+1300 I NETWORK  [conn42] end connection 127.0.0.1:58097 (1 connection now open)
+2019-11-16T17:28:19.836+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:58100 #43 (2 connections now open)
+2019-11-16T17:28:19.839+1300 I NETWORK  [conn43] received client metadata from 127.0.0.1:58100 conn43: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:28:19.857+1300 I ACCESS   [conn43] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:28:31.321+1300 I NETWORK  [conn43] end connection 127.0.0.1:58100 (1 connection now open)
+2019-11-16T17:28:31.690+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:58104 #44 (2 connections now open)
+2019-11-16T17:28:31.694+1300 I NETWORK  [conn44] received client metadata from 127.0.0.1:58104 conn44: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:28:31.717+1300 I ACCESS   [conn44] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:28:41.052+1300 I NETWORK  [conn44] end connection 127.0.0.1:58104 (1 connection now open)
+2019-11-16T17:28:41.446+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:58108 #45 (2 connections now open)
+2019-11-16T17:28:41.450+1300 I NETWORK  [conn45] received client metadata from 127.0.0.1:58108 conn45: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:28:41.470+1300 I ACCESS   [conn45] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:28:57.833+1300 I NETWORK  [conn45] end connection 127.0.0.1:58108 (1 connection now open)
+2019-11-16T17:28:58.305+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:58111 #46 (2 connections now open)
+2019-11-16T17:28:58.310+1300 I NETWORK  [conn46] received client metadata from 127.0.0.1:58111 conn46: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:28:58.337+1300 I ACCESS   [conn46] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:29:10.544+1300 I NETWORK  [conn46] end connection 127.0.0.1:58111 (1 connection now open)
+2019-11-16T17:29:11.100+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:58115 #47 (2 connections now open)
+2019-11-16T17:29:11.103+1300 I NETWORK  [conn47] received client metadata from 127.0.0.1:58115 conn47: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:29:11.125+1300 I ACCESS   [conn47] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:31:37.232+1300 I NETWORK  [conn47] end connection 127.0.0.1:58115 (1 connection now open)
+2019-11-16T17:31:38.029+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:58168 #48 (2 connections now open)
+2019-11-16T17:31:38.031+1300 I NETWORK  [conn48] received client metadata from 127.0.0.1:58168 conn48: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:31:38.049+1300 I ACCESS   [conn48] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:33:03.877+1300 I NETWORK  [conn48] end connection 127.0.0.1:58168 (1 connection now open)
+2019-11-16T17:33:04.915+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:58194 #49 (2 connections now open)
+2019-11-16T17:33:04.919+1300 I NETWORK  [conn49] received client metadata from 127.0.0.1:58194 conn49: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:33:04.944+1300 I ACCESS   [conn49] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:33:50.647+1300 I NETWORK  [conn49] end connection 127.0.0.1:58194 (1 connection now open)
+2019-11-16T17:33:51.545+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:58208 #50 (2 connections now open)
+2019-11-16T17:33:51.554+1300 I NETWORK  [conn50] received client metadata from 127.0.0.1:58208 conn50: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:33:51.584+1300 I ACCESS   [conn50] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:35:16.007+1300 I NETWORK  [conn50] end connection 127.0.0.1:58208 (1 connection now open)
+2019-11-16T17:35:16.778+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:58222 #51 (2 connections now open)
+2019-11-16T17:35:16.782+1300 I NETWORK  [conn51] received client metadata from 127.0.0.1:58222 conn51: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:35:16.803+1300 I ACCESS   [conn51] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:41:07.997+1300 I NETWORK  [conn51] end connection 127.0.0.1:58222 (1 connection now open)
+2019-11-16T17:41:08.888+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:58305 #52 (2 connections now open)
+2019-11-16T17:41:08.890+1300 I NETWORK  [conn52] received client metadata from 127.0.0.1:58305 conn52: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:41:08.910+1300 I ACCESS   [conn52] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:42:12.005+1300 I NETWORK  [conn52] end connection 127.0.0.1:58305 (1 connection now open)
+2019-11-16T17:42:13.318+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:58335 #53 (2 connections now open)
+2019-11-16T17:42:13.320+1300 I NETWORK  [conn53] received client metadata from 127.0.0.1:58335 conn53: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:42:13.341+1300 I ACCESS   [conn53] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:46:46.582+1300 I NETWORK  [conn53] end connection 127.0.0.1:58335 (1 connection now open)
+2019-11-16T17:46:47.978+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:58396 #54 (2 connections now open)
+2019-11-16T17:46:47.981+1300 I NETWORK  [conn54] received client metadata from 127.0.0.1:58396 conn54: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:46:48.049+1300 I ACCESS   [conn54] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:53:20.747+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:58488 #55 (3 connections now open)
+2019-11-16T17:53:20.748+1300 I NETWORK  [conn55] received client metadata from 127.0.0.1:58488 conn55: { driver: { name: "nodejs", version: "2.2.36" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "Node.js v10.11.0, LE, mongodb-core: 2.1.20", application: { name: "vscode-cosmosdb/0.11.0" } }
+2019-11-16T17:53:20.751+1300 I NETWORK  [conn55] end connection 127.0.0.1:58488 (2 connections now open)
+2019-11-16T17:53:20.767+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:58489 #56 (3 connections now open)
+2019-11-16T17:53:20.768+1300 I NETWORK  [conn56] received client metadata from 127.0.0.1:58489 conn56: { driver: { name: "nodejs", version: "2.2.36" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "Node.js v10.11.0, LE, mongodb-core: 2.1.20", application: { name: "vscode-cosmosdb/0.11.0" } }
+2019-11-16T17:57:50.514+1300 I NETWORK  [conn54] end connection 127.0.0.1:58396 (2 connections now open)
+2019-11-16T17:57:51.624+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:58533 #57 (3 connections now open)
+2019-11-16T17:57:51.627+1300 I NETWORK  [conn57] received client metadata from 127.0.0.1:58533 conn57: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:57:51.644+1300 I ACCESS   [conn57] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:58:03.657+1300 I NETWORK  [conn57] end connection 127.0.0.1:58533 (2 connections now open)
+2019-11-16T17:58:04.597+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:58558 #58 (3 connections now open)
+2019-11-16T17:58:04.600+1300 I NETWORK  [conn58] received client metadata from 127.0.0.1:58558 conn58: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:58:04.617+1300 I ACCESS   [conn58] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:58:08.931+1300 I NETWORK  [conn58] end connection 127.0.0.1:58558 (2 connections now open)
+2019-11-16T17:58:09.397+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:58560 #59 (3 connections now open)
+2019-11-16T17:58:09.401+1300 I NETWORK  [conn59] received client metadata from 127.0.0.1:58560 conn59: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:58:09.437+1300 I ACCESS   [conn59] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T17:59:28.660+1300 I NETWORK  [conn59] end connection 127.0.0.1:58560 (2 connections now open)
+2019-11-16T17:59:29.523+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:58575 #60 (3 connections now open)
+2019-11-16T17:59:29.526+1300 I NETWORK  [conn60] received client metadata from 127.0.0.1:58575 conn60: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T17:59:29.543+1300 I ACCESS   [conn60] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T18:00:53.351+1300 I NETWORK  [conn60] end connection 127.0.0.1:58575 (2 connections now open)
+2019-11-16T18:00:54.726+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:58603 #61 (3 connections now open)
+2019-11-16T18:00:54.729+1300 I NETWORK  [conn61] received client metadata from 127.0.0.1:58603 conn61: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T18:00:54.746+1300 I ACCESS   [conn61] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T18:04:15.835+1300 I NETWORK  [conn61] end connection 127.0.0.1:58603 (2 connections now open)
+2019-11-16T18:04:16.854+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:58635 #62 (3 connections now open)
+2019-11-16T18:04:16.857+1300 I NETWORK  [conn62] received client metadata from 127.0.0.1:58635 conn62: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T18:04:16.877+1300 I ACCESS   [conn62] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-16T18:10:07.457+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:58730 #63 (4 connections now open)
+2019-11-16T18:10:07.458+1300 I NETWORK  [conn63] received client metadata from 127.0.0.1:58730 conn63: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-16T18:10:07.462+1300 I ACCESS   [conn63] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-17T09:01:33.092+1300 I NETWORK  [conn63] end connection 127.0.0.1:58730 (3 connections now open)
+2019-11-17T09:01:33.092+1300 I NETWORK  [conn62] end connection 127.0.0.1:58635 (2 connections now open)
+2019-11-17T09:01:34.279+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:63361 #64 (3 connections now open)
+2019-11-17T09:01:34.282+1300 I NETWORK  [conn64] received client metadata from 127.0.0.1:63361 conn64: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-17T09:01:34.303+1300 I ACCESS   [conn64] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-17T09:08:34.928+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:63936 #65 (4 connections now open)
+2019-11-17T09:08:34.931+1300 I NETWORK  [conn65] received client metadata from 127.0.0.1:63936 conn65: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-17T09:08:34.936+1300 I ACCESS   [conn65] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-17T12:57:17.644+1300 I NETWORK  [conn65] end connection 127.0.0.1:63936 (3 connections now open)
+2019-11-17T12:57:17.644+1300 I NETWORK  [conn64] end connection 127.0.0.1:63361 (2 connections now open)
+2019-11-17T12:57:19.076+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:62965 #66 (3 connections now open)
+2019-11-17T12:57:19.093+1300 I NETWORK  [conn66] received client metadata from 127.0.0.1:62965 conn66: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-17T12:57:19.148+1300 I ACCESS   [conn66] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-17T12:58:12.529+1300 I NETWORK  [conn66] end connection 127.0.0.1:62965 (2 connections now open)
+2019-11-17T12:58:12.992+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:62978 #67 (3 connections now open)
+2019-11-17T12:58:12.995+1300 I NETWORK  [conn67] received client metadata from 127.0.0.1:62978 conn67: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-17T12:58:13.015+1300 I ACCESS   [conn67] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-17T13:01:16.536+1300 I NETWORK  [conn67] end connection 127.0.0.1:62978 (2 connections now open)
+2019-11-17T13:01:17.797+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:63024 #68 (3 connections now open)
+2019-11-17T13:01:17.800+1300 I NETWORK  [conn68] received client metadata from 127.0.0.1:63024 conn68: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-17T13:01:17.816+1300 I ACCESS   [conn68] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-17T13:02:35.440+1300 I NETWORK  [conn68] end connection 127.0.0.1:63024 (2 connections now open)
+2019-11-17T13:02:36.220+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:63041 #69 (3 connections now open)
+2019-11-17T13:02:36.223+1300 I NETWORK  [conn69] received client metadata from 127.0.0.1:63041 conn69: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-17T13:02:36.243+1300 I ACCESS   [conn69] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-17T13:10:34.393+1300 I NETWORK  [conn69] end connection 127.0.0.1:63041 (2 connections now open)
+2019-11-17T13:10:35.786+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:63164 #70 (3 connections now open)
+2019-11-17T13:10:35.789+1300 I NETWORK  [conn70] received client metadata from 127.0.0.1:63164 conn70: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-17T13:10:35.806+1300 I ACCESS   [conn70] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-17T13:28:11.299+1300 I NETWORK  [conn70] end connection 127.0.0.1:63164 (2 connections now open)
+2019-11-17T13:28:12.564+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:63359 #71 (3 connections now open)
+2019-11-17T13:28:12.570+1300 I NETWORK  [conn71] received client metadata from 127.0.0.1:63359 conn71: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-17T13:28:12.595+1300 I ACCESS   [conn71] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-18T09:44:54.183+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52006 #72 (4 connections now open)
+2019-11-18T09:44:54.187+1300 I NETWORK  [conn72] received client metadata from 127.0.0.1:52006 conn72: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-18T09:44:54.196+1300 I ACCESS   [conn72] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-18T09:54:06.549+1300 I WRITE    [LogicalSessionCacheRefresh] update config.system.sessions command: { q: { _id: { id: UUID("28ba3037-a8d8-44e3-ad94-f58ade02b90f"), uid: BinData(0, E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855) } }, u: { $currentDate: { lastUse: true } }, multi: false, upsert: true } planSummary: IDHACK keysExamined:1 docsExamined:1 nMatched:1 nModified:1 keysInserted:1 keysDeleted:1 numYields:1 locks:{ Global: { acquireCount: { r: 4, w: 4 } }, Database: { acquireCount: { w: 4 } }, Collection: { acquireCount: { w: 3 } } } 3702ms
+2019-11-18T09:54:06.551+1300 I COMMAND  [LogicalSessionCacheRefresh] command config.$cmd command: update { update: "system.sessions", ordered: false, allowImplicitCollectionCreation: false, writeConcern: { w: "majority", wtimeout: 15000 }, $db: "config" } numYields:0 reslen:60 locks:{ Global: { acquireCount: { r: 4, w: 4 } }, Database: { acquireCount: { w: 4 } }, Collection: { acquireCount: { w: 3 } } } protocol:op_msg 3716ms
+2019-11-18T10:04:05.851+1300 I WRITE    [LogicalSessionCacheRefresh] update config.system.sessions command: { q: { _id: { id: UUID("cd520941-922f-46a4-b5d9-35bc14eb6b71"), uid: BinData(0, E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855) } }, u: { $currentDate: { lastUse: true } }, multi: false, upsert: true } planSummary: IDHACK keysExamined:1 docsExamined:1 nMatched:1 nModified:1 keysInserted:1 keysDeleted:1 numYields:1 locks:{ Global: { acquireCount: { r: 4, w: 4 } }, Database: { acquireCount: { w: 4 } }, Collection: { acquireCount: { w: 3 } } } 2998ms
+2019-11-18T10:04:05.899+1300 I COMMAND  [LogicalSessionCacheRefresh] command config.$cmd command: update { update: "system.sessions", ordered: false, allowImplicitCollectionCreation: false, writeConcern: { w: "majority", wtimeout: 15000 }, $db: "config" } numYields:0 reslen:60 locks:{ Global: { acquireCount: { r: 4, w: 4 } }, Database: { acquireCount: { w: 4 } }, Collection: { acquireCount: { w: 3 } } } protocol:op_msg 3047ms
+2019-11-18T10:10:06.182+1300 I NETWORK  [conn72] end connection 127.0.0.1:52006 (3 connections now open)
+2019-11-18T10:10:06.184+1300 I NETWORK  [conn71] end connection 127.0.0.1:63359 (2 connections now open)
+2019-11-18T10:10:08.248+1300 I NETWORK  [conn31] end connection 127.0.0.1:57816 (1 connection now open)
+2019-11-18T10:10:08.248+1300 I NETWORK  [conn56] end connection 127.0.0.1:58489 (0 connections now open)
+2019-11-18T10:11:08.327+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52633 #73 (1 connection now open)
+2019-11-18T10:11:08.329+1300 I NETWORK  [conn73] received client metadata from 127.0.0.1:52633 conn73: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-18T10:11:08.349+1300 I ACCESS   [conn73] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-18T10:21:29.039+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52808 #74 (2 connections now open)
+2019-11-18T10:21:29.040+1300 I NETWORK  [conn74] received client metadata from 127.0.0.1:52808 conn74: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-18T10:21:29.043+1300 I ACCESS   [conn74] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-18T11:14:52.335+1300 I COMMAND  [ftdc] serverStatus was very slow: { after basic: 0, after asserts: 0, after backgroundFlushing: 0, after connections: 0, after dur: 0, after extra_info: 0, after freeMonitoring: 0, after globalLock: 0, after locks: 0, after logicalSessionRecordCache: 0, after network: 0, after opLatencies: 0, after opcounters: 0, after opcountersRepl: 0, after repl: 0, after security: 0, after storageEngine: 0, after transactions: 0, after transportSecurity: 0, after wiredTiger: 4331, at end: 4331 }
+2019-11-18T11:35:35.984+1300 I NETWORK  [conn73] end connection 127.0.0.1:52633 (1 connection now open)
+2019-11-18T11:35:35.985+1300 I NETWORK  [conn74] end connection 127.0.0.1:52808 (0 connections now open)
+2019-11-18T11:35:37.017+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:56608 #75 (1 connection now open)
+2019-11-18T11:35:37.020+1300 I NETWORK  [conn75] received client metadata from 127.0.0.1:56608 conn75: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-18T11:35:37.039+1300 I ACCESS   [conn75] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-18T11:36:37.541+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:56629 #76 (2 connections now open)
+2019-11-18T11:36:37.542+1300 I NETWORK  [conn76] received client metadata from 127.0.0.1:56629 conn76: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-18T11:36:37.546+1300 I ACCESS   [conn76] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T01:13:35.542+1300 I COMMAND  [conn75] command Dayne_Assignment_03_DB.posts command: find { find: "posts", filter: {}, sort: { post: 1 }, projection: {}, returnKey: false, showRecordId: false, lsid: { id: UUID("8fcbe20b-404c-4e05-87d4-703476c745c4") }, $db: "Dayne_Assignment_03_DB" } planSummary: COLLSCAN keysExamined:0 docsExamined:11 hasSortStage:1 cursorExhausted:1 numYields:0 nreturned:11 reslen:2284 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 414ms
+2019-11-19T02:21:06.004+1300 I COMMAND  [conn75] command Dayne_Assignment_03_DB.posts command: find { find: "posts", filter: {}, sort: { post: 1 }, projection: {}, returnKey: false, showRecordId: false, lsid: { id: UUID("8fcbe20b-404c-4e05-87d4-703476c745c4") }, $db: "Dayne_Assignment_03_DB" } planSummary: COLLSCAN keysExamined:0 docsExamined:11 hasSortStage:1 cursorExhausted:1 numYields:1 nreturned:11 reslen:2284 locks:{ Global: { acquireCount: { r: 2 } }, Database: { acquireCount: { r: 2 } }, Collection: { acquireCount: { r: 2 } } } protocol:op_msg 272265ms
+2019-11-19T05:54:51.661+1300 I COMMAND  [conn76] command Dayne_Assignment_03_DB.posts command: find { find: "posts", filter: {}, sort: { post: 1 }, projection: {}, returnKey: false, showRecordId: false, lsid: { id: UUID("8fcbe20b-404c-4e05-87d4-703476c745c4") }, $db: "Dayne_Assignment_03_DB" } planSummary: COLLSCAN keysExamined:0 docsExamined:11 hasSortStage:1 cursorExhausted:1 numYields:0 nreturned:11 reslen:2284 locks:{ Global: { acquireCount: { r: 1 } }, Database: { acquireCount: { r: 1 } }, Collection: { acquireCount: { r: 1 } } } protocol:op_msg 460ms
+2019-11-19T09:11:44.376+1300 I NETWORK  [conn76] end connection 127.0.0.1:56629 (0 connections now open)
+2019-11-19T09:11:44.376+1300 I NETWORK  [conn75] end connection 127.0.0.1:56608 (1 connection now open)
+2019-11-19T09:11:45.980+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:64576 #77 (1 connection now open)
+2019-11-19T09:11:45.982+1300 I NETWORK  [conn77] received client metadata from 127.0.0.1:64576 conn77: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T09:11:45.998+1300 I ACCESS   [conn77] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T09:13:06.505+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:64592 #78 (2 connections now open)
+2019-11-19T09:13:06.505+1300 I NETWORK  [conn78] received client metadata from 127.0.0.1:64592 conn78: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T09:13:06.511+1300 I ACCESS   [conn78] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T11:36:36.311+1300 I NETWORK  [conn78] end connection 127.0.0.1:64592 (1 connection now open)
+2019-11-19T11:36:36.311+1300 I NETWORK  [conn77] end connection 127.0.0.1:64576 (0 connections now open)
+2019-11-19T11:36:37.463+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:51283 #79 (1 connection now open)
+2019-11-19T11:36:37.465+1300 I NETWORK  [conn79] received client metadata from 127.0.0.1:51283 conn79: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T11:36:37.502+1300 I ACCESS   [conn79] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T11:37:29.993+1300 I NETWORK  [conn79] end connection 127.0.0.1:51283 (0 connections now open)
+2019-11-19T11:37:30.981+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:51290 #80 (1 connection now open)
+2019-11-19T11:37:30.984+1300 I NETWORK  [conn80] received client metadata from 127.0.0.1:51290 conn80: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T11:37:31.003+1300 I ACCESS   [conn80] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T11:39:08.231+1300 I NETWORK  [conn80] end connection 127.0.0.1:51290 (0 connections now open)
+2019-11-19T11:39:09.366+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:51310 #81 (1 connection now open)
+2019-11-19T11:39:09.368+1300 I NETWORK  [conn81] received client metadata from 127.0.0.1:51310 conn81: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T11:39:09.386+1300 I ACCESS   [conn81] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T11:39:55.244+1300 I NETWORK  [conn81] end connection 127.0.0.1:51310 (0 connections now open)
+2019-11-19T11:39:56.181+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:51318 #82 (1 connection now open)
+2019-11-19T11:39:56.184+1300 I NETWORK  [conn82] received client metadata from 127.0.0.1:51318 conn82: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T11:39:56.205+1300 I ACCESS   [conn82] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T11:41:34.626+1300 I NETWORK  [conn82] end connection 127.0.0.1:51318 (0 connections now open)
+2019-11-19T11:41:35.852+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:51336 #83 (1 connection now open)
+2019-11-19T11:41:35.857+1300 I NETWORK  [conn83] received client metadata from 127.0.0.1:51336 conn83: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T11:41:35.881+1300 I ACCESS   [conn83] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T11:42:39.862+1300 I NETWORK  [conn83] end connection 127.0.0.1:51336 (0 connections now open)
+2019-11-19T11:42:40.883+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:51349 #84 (1 connection now open)
+2019-11-19T11:42:40.886+1300 I NETWORK  [conn84] received client metadata from 127.0.0.1:51349 conn84: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T11:42:40.911+1300 I ACCESS   [conn84] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T11:42:53.452+1300 I NETWORK  [conn84] end connection 127.0.0.1:51349 (0 connections now open)
+2019-11-19T11:42:54.513+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:51354 #85 (1 connection now open)
+2019-11-19T11:42:54.516+1300 I NETWORK  [conn85] received client metadata from 127.0.0.1:51354 conn85: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T11:42:54.534+1300 I ACCESS   [conn85] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T11:43:41.007+1300 I NETWORK  [conn85] end connection 127.0.0.1:51354 (0 connections now open)
+2019-11-19T11:43:42.022+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:51367 #86 (1 connection now open)
+2019-11-19T11:43:42.026+1300 I NETWORK  [conn86] received client metadata from 127.0.0.1:51367 conn86: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T11:43:42.061+1300 I ACCESS   [conn86] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T11:43:54.545+1300 I NETWORK  [conn86] end connection 127.0.0.1:51367 (0 connections now open)
+2019-11-19T11:43:56.476+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:51375 #87 (1 connection now open)
+2019-11-19T11:43:56.480+1300 I NETWORK  [conn87] received client metadata from 127.0.0.1:51375 conn87: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T11:43:56.502+1300 I ACCESS   [conn87] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T11:44:09.712+1300 I NETWORK  [conn87] end connection 127.0.0.1:51375 (0 connections now open)
+2019-11-19T11:44:10.672+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:51380 #88 (1 connection now open)
+2019-11-19T11:44:10.676+1300 I NETWORK  [conn88] received client metadata from 127.0.0.1:51380 conn88: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T11:44:10.722+1300 I ACCESS   [conn88] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T11:44:11.704+1300 I NETWORK  [conn88] end connection 127.0.0.1:51380 (0 connections now open)
+2019-11-19T11:44:12.548+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:51383 #89 (1 connection now open)
+2019-11-19T11:44:12.551+1300 I NETWORK  [conn89] received client metadata from 127.0.0.1:51383 conn89: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T11:44:12.580+1300 I ACCESS   [conn89] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T11:44:49.568+1300 I NETWORK  [conn89] end connection 127.0.0.1:51383 (0 connections now open)
+2019-11-19T11:44:50.011+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:51393 #90 (1 connection now open)
+2019-11-19T11:44:50.013+1300 I NETWORK  [conn90] received client metadata from 127.0.0.1:51393 conn90: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T11:44:50.037+1300 I ACCESS   [conn90] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T11:44:52.354+1300 I NETWORK  [conn90] end connection 127.0.0.1:51393 (0 connections now open)
+2019-11-19T11:44:53.018+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:51395 #91 (1 connection now open)
+2019-11-19T11:44:53.022+1300 I NETWORK  [conn91] received client metadata from 127.0.0.1:51395 conn91: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T11:44:53.048+1300 I ACCESS   [conn91] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T11:48:22.401+1300 I NETWORK  [conn91] end connection 127.0.0.1:51395 (0 connections now open)
+2019-11-19T11:48:23.592+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:51428 #92 (1 connection now open)
+2019-11-19T11:48:23.596+1300 I NETWORK  [conn92] received client metadata from 127.0.0.1:51428 conn92: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T11:48:23.616+1300 I ACCESS   [conn92] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T11:48:51.016+1300 I NETWORK  [conn92] end connection 127.0.0.1:51428 (0 connections now open)
+2019-11-19T11:48:51.933+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:51437 #93 (1 connection now open)
+2019-11-19T11:48:51.936+1300 I NETWORK  [conn93] received client metadata from 127.0.0.1:51437 conn93: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T11:48:51.953+1300 I ACCESS   [conn93] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T11:51:49.351+1300 I NETWORK  [conn93] end connection 127.0.0.1:51437 (0 connections now open)
+2019-11-19T11:51:50.773+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:51464 #94 (1 connection now open)
+2019-11-19T11:51:50.777+1300 I NETWORK  [conn94] received client metadata from 127.0.0.1:51464 conn94: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T11:51:50.798+1300 I ACCESS   [conn94] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T11:52:49.365+1300 I NETWORK  [conn94] end connection 127.0.0.1:51464 (0 connections now open)
+2019-11-19T11:52:50.180+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:51477 #95 (1 connection now open)
+2019-11-19T11:52:50.183+1300 I NETWORK  [conn95] received client metadata from 127.0.0.1:51477 conn95: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T11:52:50.199+1300 I ACCESS   [conn95] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T11:53:27.733+1300 I NETWORK  [conn95] end connection 127.0.0.1:51477 (0 connections now open)
+2019-11-19T11:53:28.846+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:51488 #96 (1 connection now open)
+2019-11-19T11:53:28.849+1300 I NETWORK  [conn96] received client metadata from 127.0.0.1:51488 conn96: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T11:53:28.865+1300 I ACCESS   [conn96] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T11:53:39.743+1300 I NETWORK  [conn96] end connection 127.0.0.1:51488 (0 connections now open)
+2019-11-19T11:53:40.266+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:51492 #97 (1 connection now open)
+2019-11-19T11:53:40.269+1300 I NETWORK  [conn97] received client metadata from 127.0.0.1:51492 conn97: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T11:53:40.299+1300 I ACCESS   [conn97] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T11:54:25.473+1300 I NETWORK  [conn97] end connection 127.0.0.1:51492 (0 connections now open)
+2019-11-19T11:54:26.533+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:51501 #98 (1 connection now open)
+2019-11-19T11:54:26.535+1300 I NETWORK  [conn98] received client metadata from 127.0.0.1:51501 conn98: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T11:54:26.552+1300 I ACCESS   [conn98] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T11:54:46.420+1300 I NETWORK  [conn98] end connection 127.0.0.1:51501 (0 connections now open)
+2019-11-19T11:54:46.817+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:51507 #99 (1 connection now open)
+2019-11-19T11:54:46.821+1300 I NETWORK  [conn99] received client metadata from 127.0.0.1:51507 conn99: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T11:54:46.841+1300 I ACCESS   [conn99] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T11:55:46.571+1300 I NETWORK  [conn99] end connection 127.0.0.1:51507 (0 connections now open)
+2019-11-19T11:55:47.724+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:51519 #100 (1 connection now open)
+2019-11-19T11:55:47.730+1300 I NETWORK  [conn100] received client metadata from 127.0.0.1:51519 conn100: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T11:55:47.756+1300 I ACCESS   [conn100] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T11:56:55.993+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:51537 #101 (2 connections now open)
+2019-11-19T11:56:56.006+1300 I NETWORK  [conn101] received client metadata from 127.0.0.1:51537 conn101: { driver: { name: "nodejs", version: "2.2.36" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "Node.js v10.11.0, LE, mongodb-core: 2.1.20", application: { name: "vscode-cosmosdb/0.11.0" } }
+2019-11-19T11:56:56.026+1300 I NETWORK  [conn101] end connection 127.0.0.1:51537 (1 connection now open)
+2019-11-19T11:56:56.851+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:51538 #102 (2 connections now open)
+2019-11-19T11:56:56.851+1300 I NETWORK  [conn102] received client metadata from 127.0.0.1:51538 conn102: { driver: { name: "nodejs", version: "2.2.36" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "Node.js v10.11.0, LE, mongodb-core: 2.1.20", application: { name: "vscode-cosmosdb/0.11.0" } }
+2019-11-19T11:58:03.179+1300 I NETWORK  [conn100] end connection 127.0.0.1:51519 (1 connection now open)
+2019-11-19T11:58:04.469+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:51551 #103 (2 connections now open)
+2019-11-19T11:58:04.471+1300 I NETWORK  [conn103] received client metadata from 127.0.0.1:51551 conn103: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T11:58:04.493+1300 I ACCESS   [conn103] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T11:58:08.636+1300 I NETWORK  [conn103] end connection 127.0.0.1:51551 (1 connection now open)
+2019-11-19T11:58:09.047+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:51554 #104 (2 connections now open)
+2019-11-19T11:58:09.052+1300 I NETWORK  [conn104] received client metadata from 127.0.0.1:51554 conn104: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T11:58:09.072+1300 I ACCESS   [conn104] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T12:14:15.967+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:51716 #105 (3 connections now open)
+2019-11-19T12:14:15.970+1300 I NETWORK  [conn105] received client metadata from 127.0.0.1:51716 conn105: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T12:14:15.975+1300 I ACCESS   [conn105] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T12:32:29.478+1300 I NETWORK  [conn105] end connection 127.0.0.1:51716 (1 connection now open)
+2019-11-19T12:32:29.478+1300 I NETWORK  [conn104] end connection 127.0.0.1:51554 (2 connections now open)
+2019-11-19T12:32:30.713+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52115 #106 (2 connections now open)
+2019-11-19T12:32:30.716+1300 I NETWORK  [conn106] received client metadata from 127.0.0.1:52115 conn106: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T12:32:30.732+1300 I ACCESS   [conn106] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T12:32:36.472+1300 I NETWORK  [conn106] end connection 127.0.0.1:52115 (1 connection now open)
+2019-11-19T12:32:36.980+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52118 #107 (2 connections now open)
+2019-11-19T12:32:36.983+1300 I NETWORK  [conn107] received client metadata from 127.0.0.1:52118 conn107: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T12:32:37.002+1300 I ACCESS   [conn107] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T12:39:52.027+1300 I NETWORK  [conn107] end connection 127.0.0.1:52118 (1 connection now open)
+2019-11-19T12:39:53.074+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52171 #108 (2 connections now open)
+2019-11-19T12:39:53.077+1300 I NETWORK  [conn108] received client metadata from 127.0.0.1:52171 conn108: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T12:39:53.097+1300 I ACCESS   [conn108] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T12:40:28.045+1300 I NETWORK  [conn108] end connection 127.0.0.1:52171 (1 connection now open)
+2019-11-19T12:40:28.439+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52180 #109 (2 connections now open)
+2019-11-19T12:40:28.442+1300 I NETWORK  [conn109] received client metadata from 127.0.0.1:52180 conn109: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T12:40:28.462+1300 I ACCESS   [conn109] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T12:40:47.791+1300 I NETWORK  [conn109] end connection 127.0.0.1:52180 (1 connection now open)
+2019-11-19T12:40:48.799+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52193 #110 (2 connections now open)
+2019-11-19T12:40:48.802+1300 I NETWORK  [conn110] received client metadata from 127.0.0.1:52193 conn110: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T12:40:48.818+1300 I ACCESS   [conn110] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T12:42:28.082+1300 I NETWORK  [conn110] end connection 127.0.0.1:52193 (1 connection now open)
+2019-11-19T12:42:28.973+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52213 #111 (2 connections now open)
+2019-11-19T12:42:28.976+1300 I NETWORK  [conn111] received client metadata from 127.0.0.1:52213 conn111: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T12:42:28.996+1300 I ACCESS   [conn111] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T12:42:30.675+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52217 #112 (3 connections now open)
+2019-11-19T12:42:30.676+1300 I NETWORK  [conn112] received client metadata from 127.0.0.1:52217 conn112: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T12:42:30.677+1300 I ACCESS   [conn112] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T12:43:35.262+1300 I NETWORK  [conn112] end connection 127.0.0.1:52217 (2 connections now open)
+2019-11-19T12:43:35.262+1300 I NETWORK  [conn111] end connection 127.0.0.1:52213 (1 connection now open)
+2019-11-19T12:43:36.076+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52235 #113 (2 connections now open)
+2019-11-19T12:43:36.079+1300 I NETWORK  [conn113] received client metadata from 127.0.0.1:52235 conn113: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T12:43:36.098+1300 I ACCESS   [conn113] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T12:44:38.703+1300 I NETWORK  [conn113] end connection 127.0.0.1:52235 (1 connection now open)
+2019-11-19T12:44:39.241+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52250 #114 (2 connections now open)
+2019-11-19T12:44:39.244+1300 I NETWORK  [conn114] received client metadata from 127.0.0.1:52250 conn114: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T12:44:39.260+1300 I ACCESS   [conn114] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T12:44:47.907+1300 I NETWORK  [conn114] end connection 127.0.0.1:52250 (1 connection now open)
+2019-11-19T12:44:48.352+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52254 #115 (2 connections now open)
+2019-11-19T12:44:48.356+1300 I NETWORK  [conn115] received client metadata from 127.0.0.1:52254 conn115: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T12:44:48.373+1300 I ACCESS   [conn115] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T12:45:48.879+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52290 #116 (3 connections now open)
+2019-11-19T12:45:48.880+1300 I NETWORK  [conn116] received client metadata from 127.0.0.1:52290 conn116: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T12:45:48.883+1300 I ACCESS   [conn116] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T12:50:56.964+1300 I NETWORK  [conn116] end connection 127.0.0.1:52290 (2 connections now open)
+2019-11-19T12:50:56.964+1300 I NETWORK  [conn115] end connection 127.0.0.1:52254 (1 connection now open)
+2019-11-19T12:50:58.292+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52352 #117 (2 connections now open)
+2019-11-19T12:50:58.295+1300 I NETWORK  [conn117] received client metadata from 127.0.0.1:52352 conn117: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T12:50:58.313+1300 I ACCESS   [conn117] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T12:51:20.985+1300 I NETWORK  [conn117] end connection 127.0.0.1:52352 (1 connection now open)
+2019-11-19T12:51:21.371+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52367 #118 (2 connections now open)
+2019-11-19T12:51:21.374+1300 I NETWORK  [conn118] received client metadata from 127.0.0.1:52367 conn118: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T12:51:21.394+1300 I ACCESS   [conn118] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T12:52:06.462+1300 I NETWORK  [conn118] end connection 127.0.0.1:52367 (1 connection now open)
+2019-11-19T12:52:06.904+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52376 #119 (2 connections now open)
+2019-11-19T12:52:06.907+1300 I NETWORK  [conn119] received client metadata from 127.0.0.1:52376 conn119: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T12:52:06.924+1300 I ACCESS   [conn119] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T12:52:24.131+1300 I NETWORK  [conn119] end connection 127.0.0.1:52376 (1 connection now open)
+2019-11-19T12:52:24.777+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52382 #120 (2 connections now open)
+2019-11-19T12:52:24.781+1300 I NETWORK  [conn120] received client metadata from 127.0.0.1:52382 conn120: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T12:52:24.811+1300 I ACCESS   [conn120] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T12:55:17.181+1300 I NETWORK  [conn120] end connection 127.0.0.1:52382 (1 connection now open)
+2019-11-19T12:55:18.205+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52395 #121 (2 connections now open)
+2019-11-19T12:55:18.207+1300 I NETWORK  [conn121] received client metadata from 127.0.0.1:52395 conn121: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T12:55:18.223+1300 I ACCESS   [conn121] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T12:55:56.458+1300 I NETWORK  [conn121] end connection 127.0.0.1:52395 (1 connection now open)
+2019-11-19T12:55:57.622+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52406 #122 (2 connections now open)
+2019-11-19T12:55:57.626+1300 I NETWORK  [conn122] received client metadata from 127.0.0.1:52406 conn122: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T12:55:57.643+1300 I ACCESS   [conn122] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T12:56:57.082+1300 I NETWORK  [conn122] end connection 127.0.0.1:52406 (1 connection now open)
+2019-11-19T12:56:58.094+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52418 #123 (2 connections now open)
+2019-11-19T12:56:58.097+1300 I NETWORK  [conn123] received client metadata from 127.0.0.1:52418 conn123: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T12:56:58.115+1300 I ACCESS   [conn123] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T12:57:31.262+1300 I NETWORK  [conn123] end connection 127.0.0.1:52418 (1 connection now open)
+2019-11-19T12:57:32.375+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52426 #124 (2 connections now open)
+2019-11-19T12:57:32.381+1300 I NETWORK  [conn124] received client metadata from 127.0.0.1:52426 conn124: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T12:57:32.405+1300 I ACCESS   [conn124] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T12:59:12.148+1300 I NETWORK  [conn124] end connection 127.0.0.1:52426 (1 connection now open)
+2019-11-19T12:59:13.238+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52445 #125 (2 connections now open)
+2019-11-19T12:59:13.241+1300 I NETWORK  [conn125] received client metadata from 127.0.0.1:52445 conn125: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T12:59:13.259+1300 I ACCESS   [conn125] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:00:05.005+1300 I NETWORK  [conn125] end connection 127.0.0.1:52445 (1 connection now open)
+2019-11-19T13:00:05.437+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52451 #126 (2 connections now open)
+2019-11-19T13:00:05.441+1300 I NETWORK  [conn126] received client metadata from 127.0.0.1:52451 conn126: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:00:05.460+1300 I ACCESS   [conn126] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:00:08.228+1300 I NETWORK  [conn126] end connection 127.0.0.1:52451 (1 connection now open)
+2019-11-19T13:00:08.659+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52454 #127 (2 connections now open)
+2019-11-19T13:00:08.663+1300 I NETWORK  [conn127] received client metadata from 127.0.0.1:52454 conn127: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:00:08.683+1300 I ACCESS   [conn127] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:03:16.200+1300 I NETWORK  [conn127] end connection 127.0.0.1:52454 (1 connection now open)
+2019-11-19T13:03:17.196+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52479 #128 (2 connections now open)
+2019-11-19T13:03:17.199+1300 I NETWORK  [conn128] received client metadata from 127.0.0.1:52479 conn128: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:03:17.217+1300 I ACCESS   [conn128] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:06:17.631+1300 I NETWORK  [conn128] end connection 127.0.0.1:52479 (1 connection now open)
+2019-11-19T13:06:18.981+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52512 #129 (2 connections now open)
+2019-11-19T13:06:18.984+1300 I NETWORK  [conn129] received client metadata from 127.0.0.1:52512 conn129: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:06:19.004+1300 I ACCESS   [conn129] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:08:13.366+1300 I NETWORK  [conn129] end connection 127.0.0.1:52512 (1 connection now open)
+2019-11-19T13:08:14.301+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52532 #130 (2 connections now open)
+2019-11-19T13:08:14.304+1300 I NETWORK  [conn130] received client metadata from 127.0.0.1:52532 conn130: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:08:14.320+1300 I ACCESS   [conn130] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:08:42.601+1300 I NETWORK  [conn130] end connection 127.0.0.1:52532 (1 connection now open)
+2019-11-19T13:08:42.941+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52539 #131 (2 connections now open)
+2019-11-19T13:08:42.943+1300 I NETWORK  [conn131] received client metadata from 127.0.0.1:52539 conn131: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:08:42.959+1300 I ACCESS   [conn131] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:10:38.322+1300 I NETWORK  [conn131] end connection 127.0.0.1:52539 (1 connection now open)
+2019-11-19T13:10:39.589+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52557 #132 (2 connections now open)
+2019-11-19T13:10:39.592+1300 I NETWORK  [conn132] received client metadata from 127.0.0.1:52557 conn132: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:10:39.609+1300 I ACCESS   [conn132] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:10:42.971+1300 I NETWORK  [conn132] end connection 127.0.0.1:52557 (1 connection now open)
+2019-11-19T13:10:43.353+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52560 #133 (2 connections now open)
+2019-11-19T13:10:43.356+1300 I NETWORK  [conn133] received client metadata from 127.0.0.1:52560 conn133: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:10:43.372+1300 I ACCESS   [conn133] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:11:19.944+1300 I NETWORK  [conn133] end connection 127.0.0.1:52560 (1 connection now open)
+2019-11-19T13:11:20.341+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52567 #134 (2 connections now open)
+2019-11-19T13:11:20.345+1300 I NETWORK  [conn134] received client metadata from 127.0.0.1:52567 conn134: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:11:20.365+1300 I ACCESS   [conn134] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:11:44.213+1300 I NETWORK  [conn134] end connection 127.0.0.1:52567 (1 connection now open)
+2019-11-19T13:11:44.660+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52574 #135 (2 connections now open)
+2019-11-19T13:11:44.663+1300 I NETWORK  [conn135] received client metadata from 127.0.0.1:52574 conn135: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:11:44.682+1300 I ACCESS   [conn135] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:12:04.922+1300 I NETWORK  [conn135] end connection 127.0.0.1:52574 (1 connection now open)
+2019-11-19T13:12:05.275+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52580 #136 (2 connections now open)
+2019-11-19T13:12:05.278+1300 I NETWORK  [conn136] received client metadata from 127.0.0.1:52580 conn136: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:12:05.294+1300 I ACCESS   [conn136] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:12:24.425+1300 I NETWORK  [conn136] end connection 127.0.0.1:52580 (1 connection now open)
+2019-11-19T13:12:24.828+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52586 #137 (2 connections now open)
+2019-11-19T13:12:24.831+1300 I NETWORK  [conn137] received client metadata from 127.0.0.1:52586 conn137: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:12:24.853+1300 I ACCESS   [conn137] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:12:39.423+1300 I NETWORK  [conn137] end connection 127.0.0.1:52586 (1 connection now open)
+2019-11-19T13:12:39.907+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52592 #138 (2 connections now open)
+2019-11-19T13:12:39.910+1300 I NETWORK  [conn138] received client metadata from 127.0.0.1:52592 conn138: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:12:39.930+1300 I ACCESS   [conn138] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:12:43.754+1300 I NETWORK  [conn138] end connection 127.0.0.1:52592 (1 connection now open)
+2019-11-19T13:12:44.255+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52595 #139 (2 connections now open)
+2019-11-19T13:12:44.259+1300 I NETWORK  [conn139] received client metadata from 127.0.0.1:52595 conn139: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:12:44.279+1300 I ACCESS   [conn139] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:12:56.111+1300 I NETWORK  [conn139] end connection 127.0.0.1:52595 (1 connection now open)
+2019-11-19T13:12:56.644+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52600 #140 (2 connections now open)
+2019-11-19T13:12:56.652+1300 I NETWORK  [conn140] received client metadata from 127.0.0.1:52600 conn140: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:12:56.688+1300 I ACCESS   [conn140] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:13:18.059+1300 I NETWORK  [conn140] end connection 127.0.0.1:52600 (1 connection now open)
+2019-11-19T13:13:18.580+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52606 #141 (2 connections now open)
+2019-11-19T13:13:18.583+1300 I NETWORK  [conn141] received client metadata from 127.0.0.1:52606 conn141: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:13:18.600+1300 I ACCESS   [conn141] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:13:42.316+1300 I NETWORK  [conn141] end connection 127.0.0.1:52606 (1 connection now open)
+2019-11-19T13:13:43.663+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52611 #142 (2 connections now open)
+2019-11-19T13:13:43.666+1300 I NETWORK  [conn142] received client metadata from 127.0.0.1:52611 conn142: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:13:43.685+1300 I ACCESS   [conn142] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:13:53.295+1300 I NETWORK  [conn142] end connection 127.0.0.1:52611 (1 connection now open)
+2019-11-19T13:13:53.836+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52616 #143 (2 connections now open)
+2019-11-19T13:13:53.839+1300 I NETWORK  [conn143] received client metadata from 127.0.0.1:52616 conn143: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:13:53.858+1300 I ACCESS   [conn143] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:14:00.470+1300 I NETWORK  [conn143] end connection 127.0.0.1:52616 (1 connection now open)
+2019-11-19T13:14:01.048+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52618 #144 (2 connections now open)
+2019-11-19T13:14:01.053+1300 I NETWORK  [conn144] received client metadata from 127.0.0.1:52618 conn144: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:14:01.074+1300 I ACCESS   [conn144] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:14:11.638+1300 I NETWORK  [conn144] end connection 127.0.0.1:52618 (1 connection now open)
+2019-11-19T13:14:12.247+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52624 #145 (2 connections now open)
+2019-11-19T13:14:12.251+1300 I NETWORK  [conn145] received client metadata from 127.0.0.1:52624 conn145: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:14:12.277+1300 I ACCESS   [conn145] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:15:26.802+1300 I NETWORK  [conn145] end connection 127.0.0.1:52624 (1 connection now open)
+2019-11-19T13:15:27.242+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52640 #146 (2 connections now open)
+2019-11-19T13:15:27.245+1300 I NETWORK  [conn146] received client metadata from 127.0.0.1:52640 conn146: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:15:27.263+1300 I ACCESS   [conn146] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:17:22.150+1300 I NETWORK  [conn146] end connection 127.0.0.1:52640 (1 connection now open)
+2019-11-19T13:17:23.488+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52691 #147 (2 connections now open)
+2019-11-19T13:17:23.491+1300 I NETWORK  [conn147] received client metadata from 127.0.0.1:52691 conn147: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:17:23.507+1300 I ACCESS   [conn147] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:22:27.867+1300 I NETWORK  [conn147] end connection 127.0.0.1:52691 (1 connection now open)
+2019-11-19T13:22:29.148+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52750 #148 (2 connections now open)
+2019-11-19T13:22:29.149+1300 I NETWORK  [conn148] received client metadata from 127.0.0.1:52750 conn148: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:22:29.165+1300 I ACCESS   [conn148] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:22:40.207+1300 I NETWORK  [conn148] end connection 127.0.0.1:52750 (1 connection now open)
+2019-11-19T13:22:41.101+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52753 #149 (2 connections now open)
+2019-11-19T13:22:41.105+1300 I NETWORK  [conn149] received client metadata from 127.0.0.1:52753 conn149: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:22:41.123+1300 I ACCESS   [conn149] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:23:06.942+1300 I NETWORK  [conn149] end connection 127.0.0.1:52753 (1 connection now open)
+2019-11-19T13:23:08.070+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52776 #150 (2 connections now open)
+2019-11-19T13:23:08.073+1300 I NETWORK  [conn150] received client metadata from 127.0.0.1:52776 conn150: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:23:08.090+1300 I ACCESS   [conn150] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:24:04.345+1300 I NETWORK  [conn150] end connection 127.0.0.1:52776 (1 connection now open)
+2019-11-19T13:24:05.313+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52803 #151 (2 connections now open)
+2019-11-19T13:24:05.316+1300 I NETWORK  [conn151] received client metadata from 127.0.0.1:52803 conn151: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:24:05.338+1300 I ACCESS   [conn151] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:24:51.425+1300 I NETWORK  [conn151] end connection 127.0.0.1:52803 (1 connection now open)
+2019-11-19T13:24:52.469+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52821 #152 (2 connections now open)
+2019-11-19T13:24:52.472+1300 I NETWORK  [conn152] received client metadata from 127.0.0.1:52821 conn152: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:24:52.489+1300 I ACCESS   [conn152] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:25:44.270+1300 I NETWORK  [conn152] end connection 127.0.0.1:52821 (1 connection now open)
+2019-11-19T13:25:51.950+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52831 #153 (2 connections now open)
+2019-11-19T13:25:51.953+1300 I NETWORK  [conn153] received client metadata from 127.0.0.1:52831 conn153: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:25:51.969+1300 I ACCESS   [conn153] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:30:00.039+1300 I NETWORK  [conn153] end connection 127.0.0.1:52831 (1 connection now open)
+2019-11-19T13:30:01.507+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52850 #154 (2 connections now open)
+2019-11-19T13:30:01.510+1300 I NETWORK  [conn154] received client metadata from 127.0.0.1:52850 conn154: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:30:01.530+1300 I ACCESS   [conn154] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:30:34.033+1300 I NETWORK  [conn154] end connection 127.0.0.1:52850 (1 connection now open)
+2019-11-19T13:30:35.249+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52857 #155 (2 connections now open)
+2019-11-19T13:30:35.253+1300 I NETWORK  [conn155] received client metadata from 127.0.0.1:52857 conn155: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:30:35.286+1300 I ACCESS   [conn155] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:31:20.974+1300 I NETWORK  [conn155] end connection 127.0.0.1:52857 (1 connection now open)
+2019-11-19T13:31:21.584+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52866 #156 (2 connections now open)
+2019-11-19T13:31:21.587+1300 I NETWORK  [conn156] received client metadata from 127.0.0.1:52866 conn156: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:31:21.610+1300 I ACCESS   [conn156] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:31:30.264+1300 I NETWORK  [conn156] end connection 127.0.0.1:52866 (1 connection now open)
+2019-11-19T13:31:30.808+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52872 #157 (2 connections now open)
+2019-11-19T13:31:30.811+1300 I NETWORK  [conn157] received client metadata from 127.0.0.1:52872 conn157: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:31:30.829+1300 I ACCESS   [conn157] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:31:43.650+1300 I NETWORK  [conn157] end connection 127.0.0.1:52872 (1 connection now open)
+2019-11-19T13:31:44.434+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52883 #158 (2 connections now open)
+2019-11-19T13:31:44.440+1300 I NETWORK  [conn158] received client metadata from 127.0.0.1:52883 conn158: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:31:44.469+1300 I ACCESS   [conn158] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T13:33:16.523+1300 I NETWORK  [conn158] end connection 127.0.0.1:52883 (1 connection now open)
+2019-11-19T13:33:16.943+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:52899 #159 (2 connections now open)
+2019-11-19T13:33:16.947+1300 I NETWORK  [conn159] received client metadata from 127.0.0.1:52899 conn159: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T13:33:16.965+1300 I ACCESS   [conn159] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T15:15:01.404+1300 I NETWORK  [conn159] end connection 127.0.0.1:52899 (1 connection now open)
+2019-11-19T15:15:02.789+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:53897 #160 (2 connections now open)
+2019-11-19T15:15:02.791+1300 I NETWORK  [conn160] received client metadata from 127.0.0.1:53897 conn160: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T15:15:02.808+1300 I ACCESS   [conn160] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T15:23:03.466+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:54451 #161 (3 connections now open)
+2019-11-19T15:23:03.467+1300 I NETWORK  [conn161] received client metadata from 127.0.0.1:54451 conn161: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T15:23:03.469+1300 I ACCESS   [conn161] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T15:29:29.580+1300 I NETWORK  [conn160] end connection 127.0.0.1:53897 (2 connections now open)
+2019-11-19T15:29:29.580+1300 I NETWORK  [conn161] end connection 127.0.0.1:54451 (1 connection now open)
+2019-11-19T15:29:30.580+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:55382 #162 (2 connections now open)
+2019-11-19T15:29:30.583+1300 I NETWORK  [conn162] received client metadata from 127.0.0.1:55382 conn162: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T15:29:30.604+1300 I ACCESS   [conn162] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T15:30:01.792+1300 I NETWORK  [conn162] end connection 127.0.0.1:55382 (1 connection now open)
+2019-11-19T15:30:02.250+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:55402 #163 (2 connections now open)
+2019-11-19T15:30:02.255+1300 I NETWORK  [conn163] received client metadata from 127.0.0.1:55402 conn163: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T15:30:02.276+1300 I ACCESS   [conn163] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T15:31:32.767+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:55440 #164 (3 connections now open)
+2019-11-19T15:31:32.769+1300 I NETWORK  [conn164] received client metadata from 127.0.0.1:55440 conn164: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T15:31:32.775+1300 I ACCESS   [conn164] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T16:01:52.320+1300 I NETWORK  [conn163] end connection 127.0.0.1:55402 (1 connection now open)
+2019-11-19T16:01:52.320+1300 I NETWORK  [conn164] end connection 127.0.0.1:55440 (2 connections now open)
+2019-11-19T16:01:53.496+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:57118 #165 (2 connections now open)
+2019-11-19T16:01:53.498+1300 I NETWORK  [conn165] received client metadata from 127.0.0.1:57118 conn165: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T16:01:53.515+1300 I ACCESS   [conn165] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T16:38:23.862+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:59030 #166 (3 connections now open)
+2019-11-19T16:38:23.863+1300 I NETWORK  [conn166] received client metadata from 127.0.0.1:59030 conn166: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T16:38:23.869+1300 I ACCESS   [conn166] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T18:24:16.189+1300 I NETWORK  [conn165] end connection 127.0.0.1:57118 (1 connection now open)
+2019-11-19T18:24:16.189+1300 I NETWORK  [conn166] end connection 127.0.0.1:59030 (2 connections now open)
+2019-11-19T18:24:23.428+1300 I NETWORK  [listener] connection accepted from 127.0.0.1:63241 #167 (2 connections now open)
+2019-11-19T18:24:23.432+1300 I NETWORK  [conn167] received client metadata from 127.0.0.1:63241 conn167: { driver: { name: "nodejs", version: "3.3.4" }, os: { type: "Darwin", name: "darwin", architecture: "x64", version: "19.0.0" }, platform: "'Node.js v12.10.0, LE (unified)" }
+2019-11-19T18:24:23.452+1300 I ACCESS   [conn167] Successfully authenticated as principal admin on Dayne_Assignment_03_DB
+2019-11-19T18:24:28.803+1300 I NETWORK  [conn167] end connection 127.0.0.1:63241 (1 connection now open)
